@@ -1,0 +1,105 @@
+/*
+ * @Author: yucon
+ * @Date: 2019-12-24 19:04:02
+ * @Purpose: 样式重置H5
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  word-break: break-all;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+uni-page-body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  #app,
+  uni-app {
+    height: 100%;
+    font-size: 16px;
+    font-size: 32rpx;
+    color: $color-black;
+  }
+
+  .router-view {
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    padding-bottom: calc(var(--window-bottom) + 20px);
+    padding-bottom: calc(var(--window-bottom) + 40rpx);
+  }
+
+  audio,
+  video {
+    display: block;
+    width: 100%;
+  }
+
+  image,
+  uni-image,
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  uni-navigator {
+    &.navigator-hover {
+      background-color: transparent;
+      opacity: 1;
+    }
+  }
+
+  cover-view {
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }
+
+  input,
+  textarea,
+  button {
+    display: block;
+    box-sizing: border-box;
+    caret-color: $color-main;
+    color: $color-black;
+    font: inherit;
+    line-height: 1.5;
+    appearance: none;
+    border: none;
+    outline: none;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+
+    &::placeholder,
+    .uni-input-placeholder,
+    .uni-textarea-placeholder {
+      color: $color-second;
+    }
+  }
+
+  .van-icon__image {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

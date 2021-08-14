@@ -1,0 +1,42 @@
+// ---- 基础 ----
+.font-light {
+  font-weight: 200;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-underline {
+  text-decoration: underline;
+}
+
+.font-deleteline {
+  text-decoration: line-through;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.lh-2 {
+  line-height: 2;
+}
+
+// ---- 字号 ----
+@for $i from 10 through 60 {
+  .fz-#{$i} {
+    font-size: $i * 1px !important;
+    font-size: $i * 2rpx !important;
+  }
+}
+
+// ---- 溢出省略号 ----
+@for $i from 1 through 6 {
+  .hide-text-#{$i} {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $i;
+    overflow: hidden;
+  }
+}

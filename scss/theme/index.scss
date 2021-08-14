@@ -1,0 +1,58 @@
+/*
+ * @Author: yucon
+ * @Date: 2019-12-19 16:20:36
+ * @Purpose: 全局变量
+ */
+
+// 基础颜色
+$color-main: #ff5a5a;
+$color-black: #303133;
+$color-white: #ffffff;
+$color-basic: #909399;
+$color-second: #c0c4cc;
+$color-border: #ebeef5;
+$color-mask: rgba(
+  $color: black,
+  $alpha: 0.6
+);
+
+// 行为颜色
+$color-primary: #409eff;
+$color-success: #46d662;
+$color-warning: #e6a23c;
+$color-danger: #ff7f88;
+$color-disabled: #d1d5dc;
+$color-active: #f2f6fc;
+$color-pointer: rgba(
+  $color: black,
+  $alpha: 0.2
+);
+
+// 类名控制
+@each $name,
+  $color
+    in (
+      main: $color-main,
+      black: $color-black,
+      white: $color-white,
+      basic: $color-basic,
+      second: $color-second,
+      border: $color-border,
+      mask: $color-mask,
+      primary: $color-primary,
+      success: $color-success,
+      warning: $color-warning,
+      danger: $color-danger,
+      disabled: $color-disabled,
+      active: $color-active,
+      pointer: $color-pointer
+    )
+{
+  .cl-#{'' + $name} {
+    color: $color !important;
+  }
+
+  .bcl-#{'' + $name} {
+    background-color: $color !important;
+  }
+}

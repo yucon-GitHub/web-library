@@ -1,0 +1,16 @@
+{
+  "name": "qianke-web-library",
+  "version": "1.1.4",
+  "description": "千课前端工具包（含请求封装，css工具类）",
+  "main": "./js/index.js",
+  "typings": "./types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yucon",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "moment": "^2.29.1"
+  }
+}

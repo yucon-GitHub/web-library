@@ -1,0 +1,26 @@
+/*
+ * @Date: 2019-12-19 16:12:05
+ * @Purpose: 动画
+ */
+
+@import './animate.scss';
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+// 加载中
+.animated.loading {
+  animation: rotate 2s linear infinite;
+}
+
+// 线性旋转
+.animated.rotate {
+  animation: rotate 3s linear infinite;
+}

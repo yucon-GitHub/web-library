@@ -1,0 +1,71 @@
+/*
+ * @Author: yucon
+ * @Date: 2019-12-19 16:34:11
+ * @Purpose: 基础
+ */
+
+// 元素点击反馈
+.pointer {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    filter: brightness(0.8) !important;
+  }
+}
+
+.pointer-bcl {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    background-color: $color-pointer !important;
+  }
+}
+
+// 扩大点击范围
+.more-click-range {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    top: -40rpx;
+    right: -40rpx;
+    bottom: -40rpx;
+    left: -40rpx;
+  }
+}
+
+// 禁止复制文字
+.unselect {
+  user-select: none;
+}
+
+// 禁止长按/右键保存图片
+.uncallout {
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+// 100宽
+.full-width {
+  width: 100%;
+}
+
+// 100高
+.full-height {
+  height: 100%;
+}
+
+// 右边存在右箭头
+.has-arrow-right {
+  background: url('https://resource.oss.yatiku.com/youxueFront/arrow_right.png')
+    no-repeat calc(100% - 15px) center/ 15px;
+  background: url('https://resource.oss.yatiku.com/youxueFront/arrow_right.png')
+    no-repeat calc(100% - 30rpx) center/ 30rpx;
+}

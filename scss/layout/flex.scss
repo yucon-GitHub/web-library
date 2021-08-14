@@ -1,0 +1,86 @@
+/*
+ * @Author: yucon
+ * @Date: 2019-12-19 16:34:11
+ * @Purpose: 弹性盒子
+ */
+
+.box {
+  display: flex;
+}
+
+@for $i from 1 through 10 {
+  .box-#{$i} {
+    flex: $i;
+  }
+}
+
+.box-column {
+  flex-flow: column;
+}
+
+.box-wrap {
+  flex-wrap: wrap;
+}
+
+.box-row-start {
+  justify-content: flex-start;
+}
+
+.box-column-start {
+  align-items: flex-start;
+}
+
+.box-start {
+  @extend .box-row-start;
+  @extend .box-column-start;
+}
+
+.box-row-center {
+  justify-content: center;
+}
+
+.box-column-center {
+  align-items: center;
+}
+
+.box-center {
+  @extend .box-row-center;
+  @extend .box-column-center;
+}
+
+.box-row-end {
+  justify-content: flex-end;
+}
+
+.box-column-end {
+  align-items: flex-end;
+}
+
+.box-end {
+  @extend .box-row-end;
+  @extend .box-column-end;
+}
+
+.box-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.box-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: flex-center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.box-between {
+  justify-content: space-between;
+}

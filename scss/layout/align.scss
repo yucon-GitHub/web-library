@@ -1,0 +1,31 @@
+/*
+ * @Author: yucon
+ * @Date: 2019-12-19 16:34:11
+ * @Purpose: 对齐
+ */
+
+// 文字对齐
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// 基线对齐
+.vt-middle {
+  vertical-align: middle;
+}
+
+.vt-top {
+  vertical-align: top;
+}
+
+.vt-bottom {
+  vertical-align: bottom;
+}

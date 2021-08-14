@@ -1,0 +1,82 @@
+/*
+ * @Author: yucon
+ * @Date: 2019-12-19 16:34:11
+ * @Purpose: 边框、阴影、圆角
+ */
+
+// ---- 边框 ----
+.border {
+  border: 1px solid $color-border;
+  border: 2rpx solid $color-border;
+}
+
+.border-top {
+  border-top: 1px solid $color-border;
+  border-top: 2rpx solid $color-border;
+}
+
+.border-right {
+  border-right: 1px solid $color-border;
+  border-right: 2rpx solid $color-border;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-border;
+  border-bottom: 2rpx solid $color-border;
+}
+
+.border-left {
+  border-left: 1px solid $color-border;
+  border-left: 2rpx solid $color-border;
+}
+
+// 加粗
+.border-bold {
+  border-width: 6px;
+  border-width: 12rpx;
+  border-color: $color-active;
+}
+
+// ---- 阴影 ----
+.shadow {
+  box-shadow: 0 0 10px 1px $color-border;
+  box-shadow: 0 0 20rpx 2rpx $color-border;
+}
+
+.shadow-top {
+  box-shadow: 0 -10px 10px -10px $color-border;
+  box-shadow: 0 -20rpx 20rpx -20rpx $color-border;
+}
+
+.shadow-right {
+  box-shadow: 10px 0 10px -10px $color-border;
+  box-shadow: 20rpx 0 20rpx -20rpx $color-border;
+}
+
+.shadow-bottom {
+  box-shadow: 0 10px 10px -10px $color-border;
+  box-shadow: 0 20rpx 20rpx -20rpx $color-border;
+}
+
+.shadow-left {
+  box-shadow: -10px 0 10px -10px $color-border;
+  box-shadow: -20rpx 0 20rpx -20rpx $color-border;
+}
+
+// ---- 圆角 ----
+.radius {
+  border-radius: 4px;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.radius-around {
+  border-radius: 100px;
+  border-radius: 200rpx;
+  overflow: hidden;
+}
+
+.radius-circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
