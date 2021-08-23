@@ -64,7 +64,6 @@
 .fixed-bottom-right {
   position: fixed;
   right: 15px;
-  right: 30rpx;
   bottom: 0;
   bottom: calc(var(--window-bottom) + 100px);
   z-index: 10;

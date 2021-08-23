@@ -27,7 +27,6 @@
 @for $i from 10 through 60 {
   .fz-#{$i} {
     font-size: $i * 1px !important;
-    font-size: $i * 2rpx !important;
   }
 }
 

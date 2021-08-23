@@ -1,6 +1,6 @@
 {
-  "name": "qianke-web-library",
-  "version": "1.1.4",
+  "name": "web-utils-library",
+  "version": "1.0.3",
   "description": "千课前端工具包（含请求封装，css工具类）",
   "main": "./js/index.js",
   "typings": "./types/index.d.ts",
