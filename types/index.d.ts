@@ -24,3 +24,10 @@ export function request(config?: AxiosConfigProps): any;
 export const utils: UtilsMethods;
 
 export const moment: any;
+
+/**
+ * 业务组件
+ */
+export const qiankeTable: any;
+export const qiankeUploadFile: any;
+export const qiankePagination: any;
