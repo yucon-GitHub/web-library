@@ -1,6 +1,6 @@
 {
   "name": "qianke-web-library",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "千课前端工具包（含请求封装，css工具类）",
   "main": "./js/index.js",
   "typings": "./types/index.d.ts",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "qrcodejs2": "0.0.2"
   }
 }

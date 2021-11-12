@@ -25,9 +25,12 @@ export const utils: UtilsMethods;
 
 export const moment: any;
 
+export const device: any;
+
 /**
  * 业务组件
  */
 export const qiankeTable: any;
 export const qiankeUploadFile: any;
 export const qiankePagination: any;
+export const qiankeTextToQrCode: any;
