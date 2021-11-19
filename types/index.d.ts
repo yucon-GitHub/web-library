@@ -1,5 +1,8 @@
 import { AxiosRequestConfig } from 'axios';
 
+/**
+ * request
+ */
 export interface AxiosConfigProps extends AxiosRequestConfig {
   baseUrl?: string;
   showGlobalLoading?: boolean;
@@ -9,6 +12,9 @@ export interface AxiosConfigProps extends AxiosRequestConfig {
   loadingCount?(res: number): void;
 }
 
+/**
+ * utils
+ */
 interface UtilsMethods {
   formatParams(query?: string): any;
   throttle(fn: any, interval?: number): void;
@@ -19,6 +25,17 @@ interface UtilsMethods {
   setClipboardText(content: string): any;
 }
 
+/**
+ * ossClient
+ */
+interface ossInitProps {
+  bucketName?: string;
+  dir?: string;
+  fileName?: string;
+  expireTime?: number;
+  securityType?: 'POLICY' | 'STS'
+}
+
 export function request(config?: AxiosConfigProps): any;
 
 export const utils: UtilsMethods;
@@ -26,6 +43,8 @@ export const utils: UtilsMethods;
 export const moment: any;
 
 export const device: any;
+
+export function ossClient(initObj?: ossInitProps): Promise<any | unknown>;
 
 /**
  * 业务组件

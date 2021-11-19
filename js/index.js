@@ -2,6 +2,7 @@ import request from './request';
 import * as utils from './utils';
 import moment from 'moment';
 import device from "./device";
+import ossClient from './ossClient';
 
 /**
  * components
@@ -20,6 +21,8 @@ export {
   moment,
   // 设备环境
   device,
+  // oss 客户端 直传实例
+  ossClient,
 
   // 组件
   qiankeTable,

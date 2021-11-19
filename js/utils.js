@@ -1,4 +1,11 @@
 /**
+ * node 环境判断
+ * @type {boolean}
+ */
+export const IS_DEV = process.env.NODE_ENV === 'development';
+export const IS_ONLINE = process.env.VUE_APP_TYPE === 'online';
+
+/**
  * 格式化字符串拼接参数
  * @param query 拼接的参数字符串
  * @return params 返回对象属性
