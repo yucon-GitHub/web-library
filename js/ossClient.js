@@ -1,10 +1,9 @@
 import { directUpload, urlAuthPostFile } from '../api/ossClient';
 
-import OSS from 'ali-oss';
+// import OSS from 'ali-oss';
 
 /**
- *
- * @param securityType 安全类型 目前支持 Policy 签名方式；STS授权为可拓展功能 (支持分片、断点续传)
+ * @method 安全类型 目前支持 Policy 签名方式；STS授权为可拓展功能 (支持分片、断点续传)
  * @param initObj 仅在 STS 授权模式下支持，实例客户端需要的参数
  * @returns {Promise<boolean | any>}
  */
@@ -32,16 +31,16 @@ export default async (initObj = {}) => {
 
     case 'STS':
     {
-      const { data = {} } = await directUpload();
-
-      const { accessKeyId, accessKeySecret } = data;
-
-      CLIENT = new OSS({
-        region: '',
-        bucket: bucketName,
-        accessKeyId,
-        accessKeySecret
-      });
+      // const { data = {} } = await directUpload();
+      //
+      // const { accessKeyId, accessKeySecret } = data;
+      //
+      // CLIENT = new OSS({
+      //   region: '',
+      //   bucket: bucketName,
+      //   accessKeyId,
+      //   accessKeySecret
+      // });
 
       return stsModeMethods(CLIENT);
     }
@@ -85,7 +84,7 @@ export const policyModeMethods = (data, authParams) => {
       try {
         await urlAuthPostFile(data.host, formData);
         return data.visitUrl;
-      } catch {
+      } catch (e) {
         return new Promise.reject();
       }
     }
