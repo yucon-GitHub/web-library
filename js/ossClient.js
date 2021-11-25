@@ -23,7 +23,7 @@ export default async (initObj = {}) => {
 
       let { code, data } = await directUpload(params);
       if (code === 200) {
-        return policyModeMethods(data, params);
+        return policyModeMethods(data, params, bucketName);
       } else {
         return false;
       }
@@ -68,9 +68,10 @@ export const stsModeMethods = (CLIENT) => {
  * policy 提供的方法
  * @param data
  * @param authParams
+ * @param bucketName
  * @returns {{put: (function(*=): *)}}
  */
-export const policyModeMethods = (data, authParams) => {
+export const policyModeMethods = (data, authParams, bucketName) => {
   return {
     put: async (file) => {
       let formData = new FormData();
@@ -82,7 +83,7 @@ export const policyModeMethods = (data, authParams) => {
       formData.append('file', file);
 
       try {
-        await urlAuthPostFile(data.host, formData);
+        await urlAuthPostFile(data.host, formData, bucketName);
         return data.visitUrl;
       } catch (e) {
         return new Promise.reject();
