@@ -9,4 +9,6 @@ describe("utils methods test", () => {
 
     expect(utils.formatParams('?id=1&name=小明')).toEqual(result);
   });
+
+
 });

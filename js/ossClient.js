@@ -86,7 +86,7 @@ export const policyModeMethods = (data, authParams, bucketName) => {
         await urlAuthPostFile(data.host, formData, bucketName);
         return data.visitUrl;
       } catch (e) {
-        return new Promise.reject();
+        return Promise.reject();
       }
     }
   };

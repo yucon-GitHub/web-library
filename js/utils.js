@@ -92,6 +92,7 @@ export const URLToBase64 = (url) => {
 /**
  * @method HexToRGB
  * @param {String} hex 16进制字符串
+ * @param {string || number} opacity 透明度
  * @return {String} RGB字符串
  */
 export const HexToRGB = (hex, opacity) => {
