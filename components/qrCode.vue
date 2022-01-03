@@ -95,10 +95,3 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-#qrcode {
-  img {
-    margin: 0 auto !important;
-  }
-}
-</style>

@@ -180,7 +180,7 @@ export default {
     };
 
     const rowClass = ({ columnIndex }) => {
-      return props.tableTitle[columnIndex]?.headerClassName;
+      return props.tableTitle[columnIndex] && props.tableTitle[columnIndex].headerClassName;
     };
 
     const remoteSort = ({ prop, order }) => {
@@ -200,25 +200,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-:deep(.table) {
-  @each $name,
-    $color
-      in (
-        success: $color-success,
-        main: $color-main,
-        danger: $color-danger,
-        warning: $color-warning
-      )
-  {
-    .bcl-#{$name} {
-      background-color: rgba($color: $color, $alpha: 0.3) !important;
-    }
-  }
-
-  .cl-black {
-    color: #666666 !important;
-  }
-}
-</style>

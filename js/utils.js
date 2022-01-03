@@ -65,7 +65,7 @@ export const debounce = (fn, interval = 500) => {
  * @param {String} url 图片链接
  * @return {String} Base64地址
  */
-export const URLToBase64 = (url) => {
+export const urlToBase64 = (url) => {
   return new Promise((resolve, reject) => {
     try {
       let canvas = document.createElement("canvas");
@@ -90,12 +90,12 @@ export const URLToBase64 = (url) => {
 };
 
 /**
- * @method HexToRGB
+ * @method hexToRgba
  * @param {String} hex 16进制字符串
  * @param {string || number} opacity 透明度
  * @return {String} RGB字符串
  */
-export const HexToRGB = (hex, opacity) => {
+export const hexToRgba = (hex, opacity) => {
   let reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
   let color = hex.toLowerCase();
 
@@ -121,11 +121,11 @@ export const HexToRGB = (hex, opacity) => {
 };
 
 /**
- * @method RGBToHex
+ * @method rgbToHex
  * @param {String} rgb RGB字符串
  * @return {String} 16进制字符串
  */
-export const RGBToHex = (rgb) => {
+export const rgbToHex = (rgb) => {
   let reg = /^(rgb|RGB)/;
   let color = rgb;
 

@@ -70,13 +70,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.pagination {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-</style>
