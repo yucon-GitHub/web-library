@@ -37,11 +37,21 @@ export default {
     babel({
       babelHelpers: 'runtime',
       exclude: '**/node_modules/**',
-      presets: [['@babel/preset-env']],
-      plugins: ['@babel/plugin-transform-runtime']
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            'corejs': 3,
+            'useBuiltIns': 'usage'
+          }
+        ]
+      ],
+      plugins: [
+        ['@babel/plugin-transform-runtime']
+      ]
     }),
 
-    // es6 模块 输出成 commonjs
+    // 转换 commonjs
     commonjs(),
 
     terser()
