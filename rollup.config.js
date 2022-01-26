@@ -5,35 +5,35 @@ import babel from '@rollup/plugin-babel';
 import json from '@rollup/plugin-json'
 import commonjs from "@rollup/plugin-commonjs";
 import { terser } from 'rollup-plugin-terser';
-// import sass from 'rollup-plugin-sass';
 import pkg from './package.json';
 
 export default {
   input: 'js/index.js', // 打包入口
   output: { // 打包出口
-    file: pkg.main // 最终打包出来的文件路径和文件
+    file: pkg.main, // 最终打包出来的文件路径和文件
+
+    // cjs esm amd
+    format: 'esm'
   },
 
   // 忽略打包的外部依赖，由外部安装
   external: ['qrcodejs2', 'vue', 'element-plus'],
+  globals: {
+    vue: 'Vue'
+  },
+
   plugins: [
     // 寻找外部依赖
     resolve(),
 
     // 解析 vue 文件
-    vue({
-      css: true,
-      compileTemplate: true
-    }),
+    vue(),
 
     // json 依赖
     json(),
 
-    // sass
-    // sass(),
-
     // 使用预设 @babel/preset-env 转换 es6
-    // 获取输出插件配置 plugin-transform-runtime 解决 async 和 await 语法识别问题
+    // 插件配置 plugin-transform-runtime 插件处理代码依赖复用
     babel({
       babelHelpers: 'runtime',
       exclude: '**/node_modules/**',
@@ -54,6 +54,7 @@ export default {
     // 转换 commonjs
     commonjs(),
 
+    // 代码压缩
     terser()
   ]
 };

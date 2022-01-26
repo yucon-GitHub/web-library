@@ -42,7 +42,8 @@ export default (config = {}) => {
   const INIT_AXIOS = axios.create({
     timeout,
     headers,
-    baseURL: baseUrl
+    baseURL: baseUrl,
+    withCredentials: true
   });
 
   // 请求拦截器
