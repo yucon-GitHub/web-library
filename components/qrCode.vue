@@ -20,8 +20,8 @@
 
 <script>
 import qrCode from "qrcodejs2";
-import { setClipboardText } from "../js/utils";
-
+import { utils } from "qianke-web-library";
+const { setClipboardText } = utils;
 export default {
   name: "qrCode",
 

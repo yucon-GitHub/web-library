@@ -1,6 +1,6 @@
 {
   "name": "qianke-web-library",
-  "version": "2.0.7",
+  "version": "3.0.0",
   "description": "千课前端工具包（含请求封装，css工具类）",
   "main": "./dist/index.js",
   "typings": "./types/index.d.ts",
@@ -10,7 +10,9 @@
   },
   "files": [
     "dist",
-    "scss"
+    "scss",
+    "types",
+    "components"
   ],
   "author": "yucon",
   "license": "ISC",
@@ -28,7 +30,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
     "@types/node": "^16.11.7",
-    "@vue/compiler-sfc": "^3.2.26",
+    "@vue/compiler-sfc": "^3.0.5",
     "@vue/test-utils": "^1.3.0",
     "babel-jest": "^27.3.1",
     "jest": "^27.3.1",
